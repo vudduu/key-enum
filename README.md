@@ -1,7 +1,5 @@
 # key-enum
 
-[![NPM][npm-image]][npm-url]
-
 Simple Enum library in Javascript, Supporting Flux for enumerating Action-Types
 
 ## Installation
