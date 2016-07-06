@@ -1,6 +1,6 @@
 # key-enum
 
-[![Build Status](https://travis-ci.org/vudduu/key-enum.svg?branch=master)](https://travis-ci.org/vudduu/key-enum) [![npm version](https://badge.fury.io/js/key-enum.svg)](https://www.npmjs.com/package/key-enum)
+[![Build Status](https://travis-ci.org/vudduu/key-enum.svg?branch=master)](https://travis-ci.org/vudduu/key-enum) [![npm version](https://badge.fury.io/js/key-enum.svg)](https://www.npmjs.com/package/key-enum) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Simple Enum library in Javascript, Supporting Flux for enumerating Action-Types
 
