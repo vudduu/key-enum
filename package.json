@@ -1,17 +1,19 @@
 {
   "name": "key-enum",
   "description": "Simple Enum library in Javascript, Supporting Flux for enumerating Action-Types",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Edwin Guzman <vudduu@gmail.com> (http://vudduu.com)",
   "license": "MIT",
-  "repository": "vudduu/key-enum",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vudduu/key-enum.git"
+  },
   "keywords": [
     "enum",
     "flux",
     "javascript"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^13.0.1",
     "jasmine-core": "^2.4.1",
@@ -29,5 +31,13 @@
   ],
   "scripts": {
     "test": "karma start"
+  },
+  "bugs": {
+    "url": "https://github.com/vudduu/key-enum/issues"
+  },
+  "homepage": "https://github.com/vudduu/key-enum#readme",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
   }
 }

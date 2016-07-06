@@ -4,7 +4,7 @@ Simple Enum library in Javascript, Supporting Flux for enumerating Action-Types
 ## Installation
 
 ```sh
-$ npm install vudduu/key-enum
+$ npm install key-enum
 ```
 
 ## Example
