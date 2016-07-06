@@ -1,5 +1,7 @@
 # key-enum
 
+[![Build Status](https://travis-ci.org/vudduu/key-enum.svg?branch=master)](https://travis-ci.org/vudduu/key-enum)
+
 Simple Enum library in Javascript, Supporting Flux for enumerating Action-Types
 
 ## Installation
