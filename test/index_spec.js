@@ -55,7 +55,8 @@ describe('index', function () {
       a: null,
       b: null,
       c: {
-        d: null, e: {
+        d: null,
+        e: {
           f: null, g: null
         },
         h: {
