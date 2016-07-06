@@ -10,6 +10,7 @@ module.exports = function(config) {
         browsers: ['PhantomJS'],
         browserify: {
             debug: true
-        }
+        },
+        singleRun: true
     });
 };
