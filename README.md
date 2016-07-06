@@ -13,6 +13,22 @@ $ npm install key-enum
 ```js
 var keyEnum = require('key-enum');
 var obj = keyEnum({
+    a:null,
+    b:null,
+    d:4, // default
+    e:0, // default
+    f:null,
+    g:null
+});
+
+console.log(obj); // '{a: 1, b: 2, d: 4, e: 0, f: 3, g: 5}'
+```
+
+## Example
+
+```js
+var keyEnum = require('key-enum');
+var obj = keyEnum({
     a:null, // a:0
     b:null, // b:1
     c:{
