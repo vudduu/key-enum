@@ -11,37 +11,24 @@
  *
  * @private
  */
-var KeyEnum = {
-  it: 1,
-  numbersToJump: {},
-  kEnum: function (list) {
-    var self = this
-    var visitAll = function (list, cb) {
-      for (var key in list) {
-        if (!list.hasOwnProperty(key)) continue
-        if (Object.prototype.toString.call(list[key]) === '[object Object]') {
-          visitAll(list[key], cb)
-        } else {
-          cb(list, key)
-        }
-      }
+var it = 1
+var numbersToJump = {}
+var duplicatedValues
+
+/**
+ * Visit all the keys in a object of objects
+ *
+ * @param {Object} list
+ * @param {Function} cb
+ */
+var visitAll = function visitAll (list, cb) {
+  for (var key in list) {
+    if (!list.hasOwnProperty(key)) continue
+    if (Object.prototype.toString.call(list[key]) === '[object Object]') {
+      visitAll(list[key], cb)
+    } else {
+      cb(list, key)
     }
-
-    visitAll(list, function (obj, key) {
-      if (obj[key] !== null && Object.prototype.toString.call(obj[key]) === '[object Number]') {
-        if (self.numbersToJump[obj[key]] !== undefined) {
-          console.warn('key-enum: duplicated values on declared object')
-        }
-        self.numbersToJump[obj[key]] = true
-      }
-    })
-
-    visitAll(list, function (obj, key) {
-      while (self.numbersToJump[self.it] !== undefined) self.it++
-      if (obj[key] === null) obj[key] = self.it++
-    })
-
-    return Object.freeze(list)
   }
 }
 
@@ -52,8 +39,22 @@ var KeyEnum = {
  * @return {Object}
  * @public
  */
-function keyEnum (obj) {
-  return KeyEnum.kEnum(obj)
+function keyEnum (list) {
+  duplicatedValues = false
+  visitAll(list, function fn1 (obj, key) {
+    if (obj[key] !== null && Object.prototype.toString.call(obj[key]) === '[object Number]') {
+      if (numbersToJump[obj[key]] !== undefined) {
+        duplicatedValues = true
+      }
+      numbersToJump[obj[key]] = true
+    }
+  })
+  if (duplicatedValues) console.warn('key-enum: duplicated values on declared object')
+  visitAll(list, function fn2 (obj, key) {
+    while (numbersToJump[it] !== undefined) it++
+    if (obj[key] === null) obj[key] = it++
+  })
+  return Object.freeze(list)
 }
 
 /**

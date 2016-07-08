@@ -13,7 +13,7 @@ $ npm install key-enum
 ## Example 1
 
 ```js
-var keyEnum = require('key-enum');
+var keyEnum = require('key-enum')
 var obj = keyEnum({
   a: null,
   b: null,
@@ -21,15 +21,15 @@ var obj = keyEnum({
   e: 0, // default
   f: null,
   g: null
-});
+})
 
-console.log(obj); // '{a:1, b:2, d:4, e:0, f:3, g:5}'
+console.log(obj) // '{a:1, b:2, d:4, e:0, f:3, g:5}'
 ```
 
 ## Example 2
 
 ```js
-var keyEnum = require('key-enum');
+var keyEnum = require('key-enum')
 var obj = keyEnum({
   a: null,
   b: null,
@@ -42,9 +42,9 @@ var obj = keyEnum({
       i: null, j: null
     }
   }
-});
+})
 
-console.log(obj); // '{a:0,b:1,c:{d:2,e:{f:3,g:4},h:{i:5,j:6}}}'
+console.log(obj) // '{a:0,b:1,c:{d:2,e:{f:3,g:4},h:{i:5,j:6}}}'
 ```
 
 ### [MIT Licensed](LICENSE)
