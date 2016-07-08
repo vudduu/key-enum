@@ -1,7 +1,7 @@
 {
   "name": "key-enum",
   "description": "Simple Enum library in Javascript, Supporting Flux for enumerating Action-Types",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Edwin Guzman <vudduu@gmail.com> (http://vudduu.com)",
   "license": "MIT",
   "repository": {
@@ -41,6 +41,13 @@
     "test": "test"
   },
   "standard": {
-    "globals": ["describe", "it", "expect", "jasmine", "beforeEach", "spyOn"]
+    "globals": [
+      "describe",
+      "it",
+      "expect",
+      "jasmine",
+      "beforeEach",
+      "spyOn"
+    ]
   }
 }
